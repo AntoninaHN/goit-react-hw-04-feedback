@@ -1,0 +1,12 @@
+.statistics {
+  margin-top: 20px;
+}
+.item {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  padding-bottom: 15px;
+  color: rgb(255, 172, 186);
+}
