@@ -1,3 +1,6 @@
+ul {
+  list-style-type: none;
+}
 .statistics {
   margin-top: 20px;
 }
