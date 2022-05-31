@@ -1,20 +1,19 @@
-import { useState } from 'react';
-import Statistics from './components/Statistics';
-import FeedbackOptions from './components/FeedbackOptions';
-import Notification from './components/Notification';
-import Section from './components/Section';
-import './App.css';
+import { useState } from "react";
+import Statistics from "./components/Statistics";
+import FeedbackOptions from "./components/FeedbackOptions";
+import Notification from "./components/Notification";
+import Section from "./components/Section";
 
 const initialState = {
   good: 0,
   neutral: 0,
   bad: 0,
 };
-const buttonsOption = ['good', 'neutral', 'bad'];
+const buttonsOption = ["good", "neutral", "bad"];
 const App = () => {
   const [state, setState] = useState(initialState);
 
-  const onClickButton = feedbackType => {
+  const onClickButton = (feedbackType) => {
     setState({ ...state, [feedbackType]: state[feedbackType] + 1 });
   };
   const countTotalFeedback = () => {
@@ -28,7 +27,10 @@ const App = () => {
   return (
     <>
       <Section title="Please leave feedback">
-        <FeedbackOptions options={buttonsOption} onLeaveFeedback={onClickButton}></FeedbackOptions>
+        <FeedbackOptions
+          options={buttonsOption}
+          onLeaveFeedback={onClickButton}
+        ></FeedbackOptions>
       </Section>
       <Section title="Statistic">
         {countTotalFeedback() ? (
